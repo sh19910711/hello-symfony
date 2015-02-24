@@ -56,6 +56,9 @@
         },
         "branch-alias": {
             "dev-master": "2.6-dev"
+        },
+        "heroku": {
+          "document-root": "web"
         }
     }
 }
