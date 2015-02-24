@@ -1,0 +1,20 @@
+language: php
+
+php:
+  - "5.6"
+
+sudo: false
+
+install:
+  - composer install --dev
+
+script:
+  - phpunit -c ./app
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: "j5gvxtFftEJX1f5+DmI8SUg4ozQ6mHfSr0OxOwjecOVvpbLWQ8BRkuD4DW3MMmGAonDGz86YS2pM+AysZJkBuJAPwAKxPnPAkcD5aDb3Vbo6531N6oXStAHaUxfOYykun05PvRyiXv3+WLCxRtFIbrtQloRrPCu1bm+lHrktCDM="
+  app:
+    master: you-are-symfony
+
